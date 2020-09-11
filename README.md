@@ -7,4 +7,4 @@ This task was solved using Qiskit, for which the installation instructions can b
 There are three files in this repository:
 1. `task03_details.ipynb` is an IPython notebook with details and examples of how the code was developed. For better rendering you can access the file through nbviewer [here]().
 2. `translate.py` contains the code of the compiler program (deliverable for this task).
-3. `task03_examples.ipynb` is an IPython with a few simple examples demostrating how to use the `translate.py` function. See nbviewever version [here]().
+3. `task03_examples.ipynb` is an IPython with a few simple examples demostrating how to use the `translate.py` function.
