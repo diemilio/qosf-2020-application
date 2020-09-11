@@ -6,5 +6,5 @@ This task was solved using Qiskit, for which you can find installation instructi
 
 Inside the task03 folder there are three files:
 1. `task03_details.ipynb` is an IPython notebook with details and examples of how the code was developed.
-2. `translate.py` contains the code of the compiler program.
+2. `translate.py` contains the code of the compiler program (deliverable for this task).
 3. `task03_examples.ipynb` is an IPython with a few simple examples demostrating how to use the compiler. For better rendering please use this nbviewer link.
