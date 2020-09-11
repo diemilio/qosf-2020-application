@@ -1,4 +1,4 @@
-# QOSF 2020 Application Tasks
+# QOSF 2020 Application Task
 
 This repository contains the solution to **Task #3** of the 2020 [QOSF mentorship program](https://qosf.org/qc_mentorship/) application.
 
