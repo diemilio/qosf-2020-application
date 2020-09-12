@@ -1,6 +1,6 @@
 # QOSF 2020 Mentorship Program Application (Task 3)
 
-This repository contains my approach to solving **Task #3** of the 2020 [QOSF mentorship program](https://qosf.org/qc_mentorship/) application.
+This repository contains my approach to **Task #3** of the 2020 [QOSF mentorship program](https://qosf.org/qc_mentorship/) application.
 
 This task was solved using Qiskit, for which the installation instructions can be found [here](https://qiskit.org/documentation/install.html).
 
