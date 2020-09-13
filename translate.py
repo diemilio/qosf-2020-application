@@ -66,12 +66,9 @@ def map_gates(qc_ori, trans_id = True, keep_H = False):
                 """If True, H gates are not translated into Rx, Rz basis"""
                 qc_trans.h(ind)
             else:
-                phi = np.pi
-                theta = np.pi/2
-                qc_trans.rz(phi,ind)
+                qc_trans.rz(np.pi/2,ind)
                 qc_trans.rx(np.pi/2,ind)
-                qc_trans.rz(theta,ind)
-                qc_trans.rx(-np.pi/2,ind)
+                qc_trans.rz(np.pi/2,ind)
 
         elif type(qc_ori.data[i][0]).__name__ == 'CZGate':
             """CZ is left unchanged."""
@@ -90,17 +87,13 @@ def map_gates(qc_ori, trans_id = True, keep_H = False):
                 qc_trans.cz(ind0,ind1)
                 qc_trans.h(ind1)
             else:
-                phi = np.pi
-                theta = np.pi/2
-                qc_trans.rz(phi,ind1)
+                qc_trans.rz(np.pi/2,ind1)
                 qc_trans.rx(np.pi/2,ind1)
-                qc_trans.rz(theta,ind1)
-                qc_trans.rx(-np.pi/2,ind1)
+                qc_trans.rz(np.pi/2,ind1)
                 qc_trans.cz(ind0,ind1)              
-                qc_trans.rz(phi,ind1)
+                qc_trans.rz(np.pi/2,ind1)
                 qc_trans.rx(np.pi/2,ind1)
-                qc_trans.rz(theta,ind1)
-                qc_trans.rx(-np.pi/2,ind1)
+                qc_trans.rz(np.pi/2,ind1)
             
         else:
             name = type(qc_ori.data[i][0]).__name__
