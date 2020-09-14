@@ -148,8 +148,8 @@ def optimize1(qc_ori):
                     a+=1
                     mtch_flg = True
 
-        elif gate_type1 == 'CZGate':
-            """Check if gate is CZGate, and find if adjacent gate is of same type"""
+        elif gate_type1 in twoqubitgt:
+            """Check if gate is CZGate or CXGate, and find if adjacent gate is of same type"""
             gate_qb1a = qc_red.data[a-1][1][0].index             # qubit number of control
             gate_qb1b = qc_red.data[a-1][1][1].index             # qubit number of target
 
@@ -167,7 +167,14 @@ def optimize1(qc_ori):
                     gate_qb2b = None
 
                 if (gate_qb2a == gate_qb1a) or (gate_qb2b == gate_qb1a):
-                    if (gate_type2 == gate_type1 == 'CZGate') and (((gate_qb2a == gate_qb1b) and (gate_qb2b == gate_qb1a)) or ((gate_qb2a == gate_qb1a) and (gate_qb2b == gate_qb1b))):
+                    if (gate_type2 == gate_type1 == 'CXGate') and ((gate_qb2a == gate_qb1a) and (gate_qb2b == gate_qb1b)):
+                        """Check for adjacent CX gates with matching qubits"""
+                        qc_red.data.pop(j)
+                        qc_red.data.pop(a-1)
+                        b = len(qc_red.data)
+                        a = 1
+
+                    elif (gate_type2 == gate_type1 == 'CZGate') and (((gate_qb2a == gate_qb1b) and (gate_qb2b == gate_qb1a)) or ((gate_qb2a == gate_qb1a) and (gate_qb2b == gate_qb1b))):
                         """Check for adjacent CZ gates with matching or opposite qubits"""
                         qc_red.data.pop(j)
                         qc_red.data.pop(a-1)
