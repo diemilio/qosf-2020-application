@@ -167,7 +167,7 @@ def optimize1(qc_ori):
                     gate_qb2b = None
 
                 if (gate_qb2a == gate_qb1a) or (gate_qb2b == gate_qb1a):
-                    if (gate_type2 == gate_type1 == 'CZGate') and (((gate_qb2a == gate_qb1b) and (gate_qb2b == gate_qb1a)) or ((gate_qb2a == gate_qb1b) and (gate_qb2b == gate_qb1a))):
+                    if (gate_type2 == gate_type1 == 'CZGate') and (((gate_qb2a == gate_qb1b) and (gate_qb2b == gate_qb1a)) or ((gate_qb2a == gate_qb1a) and (gate_qb2b == gate_qb1b))):
                         """Check for adjacent CZ gates with matching or opposite qubits"""
                         qc_red.data.pop(j)
                         qc_red.data.pop(a-1)
@@ -263,7 +263,7 @@ def optimize2(qc_ori):
                     gate_qb2b = None
 
                 if (gate_qb2a == gate_qb1a) or (gate_qb2b == gate_qb1a):
-                    if (gate_type2 == gate_type1 == 'CZGate') and (((gate_qb2a == gate_qb1b) and (gate_qb2b == gate_qb1a)) or ((gate_qb2a == gate_qb1b) and (gate_qb2b == gate_qb1a))):
+                    if (gate_type2 == gate_type1 == 'CZGate') and (((gate_qb2a == gate_qb1b) and (gate_qb2b == gate_qb1a)) or ((gate_qb2a == gate_qb1a) and (gate_qb2b == gate_qb1b))):
                         """Check for adjacent CZ gates with matching or opposite qubits"""
                         qc_red.data.pop(j)
                         qc_red.data.pop(a-1)
